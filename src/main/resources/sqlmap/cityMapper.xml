@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.netease.springbootDemo.dao.CityDao">
+	<resultMap type="com.netease.springbootDemo.vo.CityVo" id="cityResultMap">
+		<id column="city_id" property="cityId" jdbcType="INTEGER" />
+		<result column="city_name" property="cityName" jdbcType="VARCHAR"/>
+		<result column="province_id" property="provinceId" jdbcType="INTEGER"/>
+		<result column="city_code" property="cityCode" jdbcType="INTEGER"/>
+		<result column="db_status" property="status" jdbcType="INTEGER"/>
+		<result column="created" property="create" jdbcType="VARCHAR"/>
+		<result column="modified" property="modify" jdbcType="VARCHAR"/>
+		<result column="created_date" property="createTime" jdbcType="TIMESTAMP"/>
+		<result column="modified_date" property="modifyTime" jdbcType="TIMESTAMP"/>
+	</resultMap>
+
+	<sql id="base_columns">
+		city_id,city_name,province_id,city_code
+	</sql>
+	
+	<!-- 查询全部 -->
+	<select id="findAll" resultMap="cityResultMap">
+		SELECT 
+		<include refid="base_columns" />
+		FROM city
+		WHERE db_status = 1
+		ORDER BY order_num
+	</select>
+	
+</mapper>

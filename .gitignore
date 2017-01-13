@@ -5,3 +5,6 @@
 .springBeans
 /target/
 /bin
+.apt_generated/
+.factorypath
+.springBeans
