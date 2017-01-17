@@ -33,6 +33,5 @@ public class ConsumerHandler implements EasyMQRecMsgHandler {
 				throw new RuntimeException();
 			}
 		}
-
 	}
 }

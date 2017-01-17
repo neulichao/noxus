@@ -23,6 +23,7 @@ import com.google.common.collect.Lists;
 @Configuration
 @EnableTransactionManagement
 public class DbConfigBean {
+
 	@Bean(name = { "dbProperty" })
 	@ConfigurationProperties(locations = { "classpath:META-INF/Druid.properties" }, prefix = "jdbc-1.druid")
 	public Properties dbProperty() {
