@@ -1,4 +1,4 @@
-package com.netease.springbootDemo.task;
+package com.netease.springbootDemo.easymq.task;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
