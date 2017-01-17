@@ -106,19 +106,28 @@
       <artifactId>druid</artifactId>
       <version>1.0.20</version>
     </dependency>
-    
     <dependency>
     	<groupId>commons-lang</groupId>
 		<artifactId>commons-lang</artifactId>
 		<version>2.6</version>
     </dependency>
-
     <dependency>
     	<groupId>org.springframework.boot</groupId>
     	<artifactId>spring-boot-configuration-processor</artifactId>
     	<optional>true</optional>
     </dependency>
-	
+    <!-- easyMq producer -->
+    <dependency>
+    	<groupId>com.netease.lottery</groupId>
+		<artifactId>easymq-producer</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+    </dependency>
+    <!-- easyMq consumer -->
+	<dependency>
+    	<groupId>com.netease.lottery</groupId>
+		<artifactId>easymq-consumer</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+    </dependency>
   </dependencies>
   
   <build>
